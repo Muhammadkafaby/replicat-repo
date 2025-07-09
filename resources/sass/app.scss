@@ -1,0 +1,103 @@
+// resources/sass/app.scss
+
+// Import Bootstrap 5 using @use (must be first)
+@use 'bootstrap/scss/bootstrap';
+
+/* ====================================================== */
+/* ======= CSS UMUM (Berlaku untuk semua halaman) ======= */
+/* ====================================================== */
+body {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Tinggi minimal 100% viewport */
+}
+
+/* =============================================================== */
+/* ======= CSS UNTUK HALAMAN LOGIN DAN REGISTRASI (FORM) ======= */
+/* =============================================================== */
+.form-container, .login-container { /* Kontainer utama untuk form login/registrasi */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Lebar default untuk form */
+    text-align: center;
+}
+
+.logo { /* Untuk logo di dalam form login/registrasi */
+    margin-bottom: 20px;
+}
+.logo img {
+    width: 80px; /* Ukuran logo default */
+    margin-bottom: 10px;
+}
+.form-label { /* Untuk label input */
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Styling Khusus untuk Input Password dengan Ikon Mata */
+.input-group-password {
+    position: relative;
+}
+.input-group-password .toggle-password {
+    position: absolute;
+    right: 0.75rem; /* Posisi ikon mata dari kanan */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+/* Memastikan input password tetap rounded di kanan dan ada padding untuk ikon */
+.input-group-password .form-control {
+    border-top-right-radius: var(--bs-border-radius) !important;
+    border-bottom-right-radius: var(--bs-border-radius) !important;
+    padding-right: 2.75rem; /* Tambahkan padding agar teks tidak tertutup ikon */
+}
+
+
+/* ============================================== */
+/* ======= CSS UNTUK HALAMAN BERANDA (HOME) ======= */
+/* ============================================== */
+.landing-container { /* Kontainer utama untuk halaman beranda */
+    max-width: 600px; /* Lebih lebar untuk landing page */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.landing-logo { /* Untuk logo di halaman beranda */
+    margin-bottom: 30px; /* Lebih banyak margin bawah dari logo form */
+}
+.landing-logo img {
+    width: 180px; /* <--- UKURAN LOGO DI HALAMAN BERANDA DIUBAH MENJADI 180px */
+    margin-bottom: 15px;
+}
+.tagline {
+    font-size: 1.25rem;
+    color: #495057;
+    margin-bottom: 30px;
+}
+.description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+.action-buttons .btn {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    margin: 0 10px;
+    min-width: 120px;
+}
+@media (max-width: 576px) {
+    .action-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
